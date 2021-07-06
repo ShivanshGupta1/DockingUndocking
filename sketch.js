@@ -11,14 +11,14 @@ function preload() {
 }
 function setup() {
   createCanvas(800, 400);
-
-  issSprite = createSprite(400, 200, 50, 50);
-  issSprite.addImage(iss);
-  issSprite.scale = 0.75;
   spacecraftSprite = createSprite(400, 300, 50, 50);
   spacecraftSprite.addImage(spCraft);
   spacecraftSprite.scale = 0.25;
   spacecraftSprite.x = Math.round(random(100, 700));
+  issSprite = createSprite(400, 200, 50, 50);
+  issSprite.addImage(iss);
+  issSprite.scale = 0.75;
+
 }
 
 function draw() {
@@ -41,7 +41,8 @@ function draw() {
     } else {
       spacecraftSprite.addImage(spCraft);
     }
-    if (spacecraftSprite.x >= 347 && spacecraftSprite.y <= 280) {
+    console.log(spacecraftSprite.x,spacecraftSprite.y)
+    if (spacecraftSprite.x >= 335 && spacecraftSprite.x <= 350 && spacecraftSprite.y >= 265 && spacecraftSprite.y <= 278) {
       hasDocked = true;
     }
   } else {
