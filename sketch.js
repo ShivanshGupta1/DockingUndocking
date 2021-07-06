@@ -35,6 +35,7 @@ function draw() {
       spacecraftSprite.x += 2;
     } else if (keyIsDown(DOWN_ARROW)) {
       spacecraftSprite.addImage(spCraftB);
+       spacecraftSprite.y += 2;
     } else if (keyIsDown(UP_ARROW)) {
       spacecraftSprite.addImage(spCraftB);
       spacecraftSprite.y -= 2;
